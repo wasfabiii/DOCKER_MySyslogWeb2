@@ -30,8 +30,8 @@ services:
       - ELASTICSEARCH_HOST=http://elasticsearch:9200
       - XPACK_MONITORING_ENABLED=false
     volumes:
-      - ./logstash/pipeline:/usr/share/logstash/pipeline:ro
-      - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
+      - ./logstash/pipeline:/usr/share/logstash/pipeline:rw
+      - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:rw
     ports:
       - "5514:5514/tcp"
       - "5514:5514/udp"
